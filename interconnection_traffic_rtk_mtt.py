@@ -17,6 +17,7 @@ import calendar
 
 config = configparser.ConfigParser()
 config.read('config.ini', encoding='utf-8-sig')
+
 server = config.get('mail', 'server')
 From = config.get('mail', 'From')
 To = config.get('mail', 'To')
@@ -24,10 +25,6 @@ path_to_files =config.get('DB', 'path_to_sql_file')
 ora_server = config.get('DB', 'ora_server')
 ora_login = config.get('DB', 'ora_login')
 ora_pass = config.get('DB', 'ora_pass')
-
-
-
-#path_to_files = '/main//ACCESSION_TRAFFIC_RTK_MTT/'
 
 # Вычесляем текущую дату, дату начала и дату окончания
 today = date.today()
